@@ -28,6 +28,15 @@ body {
   padding: 2% 8%;
 }
 
+.outlined-text-shadow {
+  color: white; /* Делает заливку текста прозрачной */
+  text-shadow:
+    -1px -1px 0 #000000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
 @media screen and (min-width: 100px) {
   body {
     margin: auto;
