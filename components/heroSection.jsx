@@ -1,5 +1,6 @@
 import Image from "next/image";
-import hero from "@/public/hero.svg";
+import SocialMedia from "./socialMedia";
+import hero from "@/public/hero.svg"
 import Shuffle from "./shuffleAnimation";
 
 export default function HeroSection() {
@@ -118,6 +119,7 @@ export default function HeroSection() {
             </p>
           </div>
         </div>
+        <SocialMedia />
       </section>
     </>
   );

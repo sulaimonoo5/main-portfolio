@@ -8,8 +8,6 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
   --font-sora: var(--font-sora);
 }
 
@@ -35,11 +33,4 @@ body {
      1px -1px 0 #000,
     -1px  1px 0 #000,
      1px  1px 0 #000;
-}
-
-@media screen and (min-width: 100px) {
-  body {
-    margin: auto;
-    padding: 2% 5%;
-  }
 }

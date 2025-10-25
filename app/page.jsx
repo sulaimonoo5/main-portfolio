@@ -1,14 +1,14 @@
 "use client";
 import HeaderMenu from "@/components/headerMenu";
 import HeroSection from "@/components/heroSection";
-import SocialMedia from "@/components/socialMedia";
+import MySkills from "@/components/mySkills";
 
 export default function Home() {
   return (
     <main className="font-sora">
       <HeaderMenu />
       <HeroSection />
-      <SocialMedia />
+      <MySkills />
     </main>
   );
 }
