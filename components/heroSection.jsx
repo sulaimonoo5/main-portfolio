@@ -6,7 +6,7 @@ import Shuffle from "./shuffleAnimation";
 export default function HeroSection() {
   return (
     <>
-      <section className="mt-12 lg:w-md flex flex-col justify-center items-center md:hidden">
+      <section className="paddings mt-12 lg:w-md flex flex-col justify-center items-center md:hidden">
         <div>
           <Image
             src={hero}

@@ -6,7 +6,7 @@ export default function HeaderMenu() {
 
   return (
     <>
-      <header className="flex justify-between items-center md:hidden">
+      <header className="paddings flex justify-between items-center md:hidden">
         <h1 className="font-sora font-bold text-2xl">
           <span>portfolio</span>
         </h1>
