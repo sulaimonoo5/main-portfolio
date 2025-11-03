@@ -2,6 +2,7 @@
 import AboutMe from "@/components/aboutMe";
 import HeaderMenu from "@/components/headerMenu";
 import HeroSection from "@/components/heroSection";
+import MyProjects from "@/components/myProjects";
 import MySkills from "@/components/mySkills";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <HeroSection />
       <MySkills />
       <AboutMe />
+      <MyProjects />
     </main>
   );
 }

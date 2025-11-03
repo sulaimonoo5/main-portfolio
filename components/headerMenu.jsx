@@ -8,7 +8,7 @@ export default function HeaderMenu() {
     <>
       <header className="paddings flex justify-between items-center md:hidden">
         <h1 className="font-sora font-bold text-2xl">
-          <span>portfolio</span>
+          <span>Sulaimon</span>
         </h1>
         <menu className="">
           <button
