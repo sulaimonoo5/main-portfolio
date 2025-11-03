@@ -108,7 +108,7 @@ export default function HeroSection() {
           </h1>
 
           <div className="mt-10 w-80">
-            <p className="text-[14px] font-extralight">
+            <p className="text-[14px] font-extralight mb-14">
               I'm Sulaimon and you know <br />
               The world's first programme written by a woman was created even
               before computers were invented. In the mid-19th century, Ada

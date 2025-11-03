@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function MyProjects() {
   return (
     <>
-      <main className="bg-black text-white paddings">
+      <main className="bg-black text-white paddings md:hidden">
         <section className="flex flex-col gap-20 pb-10">
           <div>
             <h1 className="text-2xl text-center pt-12">

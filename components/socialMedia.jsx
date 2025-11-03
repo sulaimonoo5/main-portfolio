@@ -7,8 +7,8 @@ import github from "@/public/github.svg"
 export default function SocialMedia() {
   return (
     <>
-      <section className="paddings flex gap-6 mb-24 md:hidden">
-        <button className="mt-12 pt-2 pb-2 pl-2 pr-2 border-2 rounded-lg w-12 h-12 flex justify-center items-center">
+      <section className="flex items-start w-full gap-6 md:hidden">
+        <button className="pt-2 pb-2 pl-2 pr-2 border-2 rounded-lg w-12 h-12 flex justify-center items-center">
           <Image
             src={facebook}
             alt="facebook"
@@ -17,7 +17,7 @@ export default function SocialMedia() {
             className=""
           />
         </button>
-        <button className="mt-12 pt-2 pb-2 pl-2 pr-2 border-2 rounded-lg w-12 h-12 flex justify-center items-center">
+        <button className="pt-2 pb-2 pl-2 pr-2 border-2 rounded-lg w-12 h-12 flex justify-center items-center">
           <Image
             src={linnkedin}
             alt="linkedin"
@@ -26,7 +26,7 @@ export default function SocialMedia() {
             className=""
           />
         </button>
-        <button className="mt-12 pt-2 pb-2 pl-2 pr-2 border-2 rounded-lg w-12 h-12 flex justify-center items-center">
+        <button className="pt-2 pb-2 pl-2 pr-2 border-2 rounded-lg w-12 h-12 flex justify-center items-center">
           <Image
             src={reddit}
             alt="reddit"
@@ -35,7 +35,7 @@ export default function SocialMedia() {
             className=""
           />
         </button>
-        <button className="mt-12 pt-2 pb-2 pl-2 pr-2 border-2 rounded-lg w-12 h-12 flex justify-center items-center">
+        <button className="pt-2 pb-2 pl-2 pr-2 border-2 rounded-lg w-12 h-12 flex justify-center items-center">
           <Image
             src={github}
             alt="github"
