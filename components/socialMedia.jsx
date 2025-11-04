@@ -27,7 +27,7 @@ export default function SocialMedia() {
             />
           </button>
         </Link>
-        <Link href="https://www.reddit.com/user/Large-Oil-4940/">
+        {/* <Link href="https://www.reddit.com/user/Large-Oil-4940/">
           <button className="pt-2 pb-2 pl-2 pr-2 border-2 rounded-lg w-12 h-12 flex justify-center items-center cursor-pointer">
             <Image
               src="./reddit.svg"
@@ -37,7 +37,7 @@ export default function SocialMedia() {
               className=""
             />
           </button>
-        </Link>
+        </Link> */}
       </section>
     </>
   );

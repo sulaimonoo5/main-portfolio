@@ -22,10 +22,10 @@ export default function Contact() {
                 name="help text"
                 placeholder="How can I help you"
                 id="textarea"
-                className="p-3 border-2 rounded-md h-36 w-102"></textarea>
+                className="p-3 border-2 rounded-md h-36 lg:w-102"></textarea>
             </form>
             <div className="lg:flex lg:gap-6">
-              <div className="flex justify-center w-full pb-8 pt-8 lg:pt-0">
+              <div className="flex justify-start w-full pb-8 pt-8 lg:pt-0">
                 <button className="bg-black text-white p-3 font-bold rounded-md cursor-pointer ">
                   Get in touch
                 </button>
