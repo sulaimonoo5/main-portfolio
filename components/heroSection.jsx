@@ -123,7 +123,7 @@ export default function HeroSection() {
             <Image
               src={hero}
               alt="hero"
-              className="sm:hidden lg:flex lg:w-110 xl:w-150"
+              className="hidden lg:flex lg:w-110 xl:w-150"
             />
           </div>
         </div>
