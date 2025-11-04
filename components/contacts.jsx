@@ -24,13 +24,13 @@ export default function Contact() {
                 id="textarea"
                 className="p-3 border-2 rounded-md h-36 lg:w-102"></textarea>
             </form>
-            <div className="lg:flex lg:gap-6">
-              <div className="flex justify-start w-full pb-8 pt-8 lg:pt-0">
+            <div className="lg:flex lg:gap-6 lg:w-102">
+              <div className="flex justify-center lg:flex lg:justify-start pb-8 pt-8 lg:pt-0">
                 <button className="bg-black text-white p-3 font-bold rounded-md cursor-pointer ">
                   Get in touch
                 </button>
               </div>
-              <div className="flex justify-center w-full">
+              <div className="flex justify-center">
                 <SocialMedia />
               </div>
             </div>
