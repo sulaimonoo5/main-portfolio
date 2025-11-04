@@ -1,8 +1,8 @@
 import Image from "next/image";
-import facebook from "@/public/Facebook.svg"
-import linnkedin from "@/public/linkedin.svg";
-import reddit from "@/public/reddit.svg";
-import github from "@/public/github.svg"
+import facebook from "@/components/icons/Facebook.svg";
+import linnkedin from "@/components/icons/linkedin.svg";
+import reddit from "@/components/icons/reddit.svg";
+import github from "@/components/icons/github.svg";
 
 export default function SocialMedia() {
   return (
