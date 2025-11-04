@@ -347,8 +347,7 @@ const Shuffle = ({
     }
   );
 
-  const baseTw =
-    "";
+  const baseTw = "";
   const commonStyle = {
     textAlign,
     fontFamily: `'Press Start 2P', sans-serif`,
