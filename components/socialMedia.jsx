@@ -1,7 +1,4 @@
 import Image from "next/image";
-import linnkedin from "@/public/linkedin.svg";
-import reddit from "@/public/reddit.svg";
-import github from "@/public/github.svg";
 import Link from "next/link";
 
 export default function SocialMedia() {
@@ -11,7 +8,7 @@ export default function SocialMedia() {
         <Link href="https://www.linkedin.com/in/jonmahmadzoda-sulaimon-9ab381343/">
           <button className="pt-2 pb-2 pl-2 pr-2 border-2 rounded-lg w-12 h-12 flex justify-center items-center cursor-pointer">
             <Image
-              src={linnkedin}
+              src=".//linkedin.svg"
               alt="linkedin"
               width={20}
               height={20}
@@ -22,7 +19,7 @@ export default function SocialMedia() {
         <Link href="https://github.com/sulaimonoo5">
           <button className="pt-2 pb-2 pl-2 pr-2 border-2 rounded-lg w-12 h-12 flex justify-center items-center cursor-pointer">
             <Image
-              src={github}
+              src=".//github.svg"
               alt="github"
               width={20}
               height={20}
@@ -33,7 +30,7 @@ export default function SocialMedia() {
         <Link href="https://www.reddit.com/user/Large-Oil-4940/">
           <button className="pt-2 pb-2 pl-2 pr-2 border-2 rounded-lg w-12 h-12 flex justify-center items-center cursor-pointer">
             <Image
-              src={reddit}
+              src=".//reddit.svg"
               alt="reddit"
               width={20}
               height={20}
