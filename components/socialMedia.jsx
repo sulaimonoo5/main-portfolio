@@ -7,7 +7,7 @@ import github from "@/public/github.svg"
 export default function SocialMedia() {
   return (
     <>
-      <section className="flex items-start w-full gap-6 md:hidden">
+      <section className="flex items-start max-w-7xl gap-6">
         <button className="pt-2 pb-2 pl-2 pr-2 border-2 rounded-lg w-12 h-12 flex justify-center items-center">
           <Image
             src={facebook}

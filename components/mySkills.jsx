@@ -52,7 +52,7 @@ export default function MySkills() {
 
   return (
     <>
-      <section id="skills" className="paddings md:hidden">
+      <section id="skills" className="">
         {/* Заголовок */}
         <div className="flex justify-center">
           <h1 className="text-2xl mt-20">
