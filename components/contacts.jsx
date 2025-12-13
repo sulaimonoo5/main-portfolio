@@ -1,60 +1,94 @@
+"use client";
+
 import Link from "next/link";
 import SocialMedia from "./socialMedia";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        e.target,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      )
+
+      .then(() => {
+        alert("Message sent successfully 🚀");
+        e.target.reset();
+      })
+      .catch((error) => {
+        console.error(error);
+        alert("Something went wrong ❌");
+      });
+  };
+
   return (
-    <>
-      <section className="paddings" id="contacts">
-        <div className="pt-14 pb-14 flex flex-col items-start gap-5 lg:max-w-7xl lg:flex lg:flex-row lg:items-center lg:justify-center">
-          <div className="lg:flex lg:flex-col lg:items-center gap-8 w-full">
-            <form action="" className="flex flex-col items-center gap-8">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="border-2 rounded-md p-3 lg:w-102"
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                className="border-2 rounded-md p-3 lg:w-102"
-              />
-              <textarea
-                name="help text"
-                placeholder="How can I help you"
-                id="textarea"
-                className="p-3 border-2 rounded-md h-36 lg:w-102"></textarea>
-            </form>
+    <section className="paddings" id="contacts">
+      <div className="pt-14 pb-14 flex flex-col items-start gap-5 lg:max-w-7xl lg:flex lg:flex-row lg:items-center lg:justify-center">
+        <div className="lg:flex lg:flex-col lg:items-center gap-8 w-full">
+          {/* ФОРМА */}
+          <form
+            onSubmit={sendEmail}
+            className="flex flex-col items-center gap-8">
+            <input
+              type="text"
+              name="user_name"
+              placeholder="Your Name"
+              required
+              className="border-2 rounded-md p-3 lg:w-102 outline-0"
+            />
+
+            <input
+              type="email"
+              name="user_email"
+              placeholder="Email"
+              required
+              className="border-2 rounded-md p-3 lg:w-102 outline-0"
+            />
+
+            <textarea
+              name="message"
+              placeholder="How can I help you"
+              required
+              className="p-3 border-2 rounded-md h-36 lg:w-102 outline-0"></textarea>
+
             <div className="lg:flex lg:gap-6 lg:w-102">
-              <div className="flex justify-center lg:flex lg:justify-start pb-8 pt-8 lg:pt-0">
-                <button className="bg-black text-white p-3 font-bold rounded-md cursor-pointer ">
-                  Get in touch
-                </button>
-              </div>
-              <div className="flex justify-center">
-                <SocialMedia />
-              </div>
+              <button
+                type="submit"
+                className="bg-black text-white p-3 font-bold rounded-md cursor-pointer">
+                Get in touch
+              </button>
+              <SocialMedia />
             </div>
-          </div>
-          <div className="flex flex-col gap-7 items-center w-full lg:pb-24">
-            <h1 className="font-bold text-3xl w-80 lg:w-96">
-              Let’s{" "}
-              <span className="text-transparent font-extrabold outlined-text-shadow inline-block">
-                make
-              </span>{" "} <br />
-              something special
-            </h1>
-            <p className="w-80 text-sm lg:w-96">
-              I build thoughtful, responsive interfaces that connect design and
-              technology, creating calm yet engaging user experiences.
-            </p>
-            <Link
-              href="jonmahmadzoda77@gmail.com"
-              className="font-bold text-left w-80 lg:w-96">
-              jonmahmadzoda77@gmail.com
-            </Link>
-          </div>
+          </form>
         </div>
-      </section>
-    </>
+
+        <div className="flex flex-col gap-7 items-center w-full lg:pb-24">
+          <h1 className="font-bold text-3xl w-80 lg:w-96">
+            Let’s{" "}
+            <span className="text-transparent font-extrabold outlined-text-shadow inline-block">
+              make
+            </span>
+            <br />
+            something special
+          </h1>
+
+          <p className="w-80 text-sm lg:w-96">
+            I build thoughtful, responsive interfaces that connect design and
+            technology, creating calm yet engaging user experiences.
+          </p>
+
+          <Link
+            href="mailto:jonmahmadzoda77@gmail.com"
+            className="font-bold text-left w-80 lg:w-96">
+            jonmahmadzoda77@gmail.com
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 }
