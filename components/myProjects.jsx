@@ -10,7 +10,7 @@ export default function MyProjects() {
       <main className="bg-black text-white paddings" id="projects">
         <section className="flex flex-col pb-10 lg:max-w-7xl">
           <div className="flex justify-center">
-            <div className="w-xl lg:w-full">
+            <div className="w-xl lg:w-full lg:pl-35">
               <div>
                 <h1 className="text-2xl text-center pt-12 pb-20">
                   My <span className="font-bold">projects</span>
