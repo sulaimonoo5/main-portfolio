@@ -8,6 +8,11 @@ export default function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    // Анти-спам: если honeypot заполнен — выходим
+    if (e.target.company.value) {
+      return;
+    }
+
     emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
@@ -34,6 +39,14 @@ export default function Contact() {
           <form
             onSubmit={sendEmail}
             className="flex flex-col items-center gap-8">
+            {/* HONEYPOT — скрытое поле которое заполнить только бот */}
+            <input
+              type="text"
+              name="company"
+              tabIndex="-1"
+              autoComplete="off"
+              className="hidden"
+            />
             <input
               type="text"
               name="user_name"
