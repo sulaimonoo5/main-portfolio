@@ -4,6 +4,7 @@ import nextjs from "@/public/nextjs.svg";
 import tailwindcss from "@/public/tailwindcss.svg";
 import html from "@/public/html-dark.svg";
 import css from "@/public/css-dark.svg";
+import react from "@/public/icon-react.svg";
 import LogoLoop from "./LogoLoop";
 import { useState } from "react";
 
@@ -13,6 +14,7 @@ export default function MySkills() {
   const [isModalOpen3, setModalOpen3] = useState(false);
   const [isModalOpen4, setModalOpen4] = useState(false);
   const [isModalOpen5, setModalOpen5] = useState(false);
+  const [isModalOpen6, setModalOpen6] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -24,6 +26,8 @@ export default function MySkills() {
   const closeModal4 = () => setModalOpen4(false);
   const openModal5 = () => setModalOpen5(true);
   const closeModal5 = () => setModalOpen5(false);
+  const openModal6 = () => setModalOpen6(true);
+  const closeModal6 = () => setModalOpen6(false);
 
   const cardLogos = [
     {
@@ -93,10 +97,26 @@ export default function MySkills() {
     {
       node: (
         <div
-          onClick={openModal5}
+          onClick={openModal6}
           className="border-2 w-40 h-40 flex justify-center items-center flex-col mt-10 rounded-xl shadow-sm bg-white cursor-pointer">
           <Image src={css} alt="css" width={56} height={56} className="mb-8" />
           <h1 className="font-semibold text-xl">CSS</h1>
+        </div>
+      ),
+    },
+    {
+      node: (
+        <div
+          onClick={openModal5}
+          className="border-2 w-40 h-40 flex justify-center items-center flex-col mt-10 rounded-xl shadow-sm bg-white cursor-pointer">
+          <Image
+            src={react}
+            alt="react"
+            width={56}
+            height={56}
+            className="mb-8"
+          />
+          <h1 className="font-semibold text-xl">React</h1>
         </div>
       ),
     },
@@ -206,6 +226,32 @@ export default function MySkills() {
             <div className="bg-white rounded-xl p-8 max-w-md w-full relative animate-fadeIn">
               <button
                 onClick={closeModal5}
+                className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 cursor-pointer">
+                ✕
+              </button>
+              <h2 className="text-xl font-bold mb-4">My Skills on React</h2>
+              <p className="text-gray-700">
+                "I have strong practical experience with React, including
+                functional components, hooks, state and props management, and
+                component lifecycle. I can build dynamic user interfaces, work
+                with APIs, and organize applications with clean and reusable
+                component architecture." <br />
+                "I am confident in React fundamentals and actively use React
+                together with Next.js to build modern, scalable web
+                applications."
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+      {isModalOpen6 && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center"
+          onClick={closeModal6}>
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-40 backdrop-blur-sm">
+            <div className="bg-white rounded-xl p-8 max-w-md w-full relative animate-fadeIn">
+              <button
+                onClick={closeModal6}
                 className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 cursor-pointer">
                 ✕
               </button>
