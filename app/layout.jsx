@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono, Sora } from "next/font/google";
 import "./globals.css";
 
+import Head from "next/head";
+
 // Оригинальные шрифты
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,7 +18,7 @@ const geistMono = Geist_Mono({
 const sora = Sora({
   variable: "--font-sora",
   subsets: ["latin"],
-  weight: ['100','200','300','400','500','600','700','800'],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata = {
@@ -26,12 +28,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${sora.variable} antialiased overflow-x-hidden`}
-      >
-        {children}
-      </body>
-    </html>
+    <>
+      <Head>
+        <link rel="icon" href="/icon.svg" />
+      </Head>
+      <html lang="en">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} ${sora.variable} antialiased overflow-x-hidden`}>
+          {children}
+        </body>
+      </html>
+    </>
   );
 }
