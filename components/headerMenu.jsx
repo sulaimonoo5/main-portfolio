@@ -7,7 +7,7 @@ export default function HeaderMenu() {
   return (
     <>
       <header
-        className="paddings flex justify-between items-center fixed top-0 left-0 w-full bg-white/40 backdrop-blur-sm z-50">
+        className="paddings flex justify-between items-center fixed top-0 left-0 w-full bg-white/95 z-50">
         <h1 className="font-sora font-bold text-2xl">
           <span>Sulaimon</span>
         </h1>
