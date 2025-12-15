@@ -1,10 +1,30 @@
-"use client";
-
 import Link from "next/link";
 import SocialMedia from "./socialMedia";
 import emailjs from "@emailjs/browser";
 
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Contact() {
+  useEffect(() => {
+    gsap.utils.toArray(".inputs").forEach((el, i) => {
+      gsap.from(el, {
+        x: i % 2 === 0 ? -300 : -300,
+        opacity: 0,
+        duration: 3,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: el,
+          end: "bottom 80%",
+          scrub: true,
+        },
+      });
+    });
+  }, []);
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -52,7 +72,7 @@ export default function Contact() {
               name="user_name"
               placeholder="Your Name"
               required
-              className="border-2 rounded-md p-3 lg:w-102 outline-0"
+              className="border-2 rounded-md p-3 lg:w-102 outline-0 inputs"
             />
 
             <input
@@ -60,19 +80,19 @@ export default function Contact() {
               name="user_email"
               placeholder="Email"
               required
-              className="border-2 rounded-md p-3 lg:w-102 outline-0"
+              className="border-2 rounded-md p-3 lg:w-102 outline-0 inputs"
             />
 
             <textarea
               name="message"
               placeholder="How can I help you"
               required
-              className="p-3 border-2 rounded-md h-36 lg:w-102 outline-0"></textarea>
+              className="p-3 border-2 rounded-md h-36 lg:w-102 outline-0 inputs"></textarea>
 
             <div className="lg:flex lg:gap-6 lg:w-102">
               <button
                 type="submit"
-                className="bg-black text-white p-3 font-bold rounded-md cursor-pointer">
+                className="inputs bg-black text-white p-3 font-bold rounded-md cursor-pointer">
                 Get in touch
               </button>
               <SocialMedia />

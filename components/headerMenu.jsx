@@ -6,13 +6,13 @@ export default function HeaderMenu() {
 
   return (
     <>
-      <header className="paddings flex justify-between items-center fixed top-0 left-0 w-full bg-white/80 z-50">
+      <header
+        className="paddings flex justify-between items-center fixed top-0 left-0 w-full bg-white/40 backdrop-blur-sm z-50">
         <h1 className="font-sora font-bold text-2xl">
           <span>Sulaimon</span>
         </h1>
 
         <menu>
-          {/* Бургер показывается только до lg */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="flex flex-col space-y-1 z-50 relative lg:hidden">
@@ -30,7 +30,6 @@ export default function HeaderMenu() {
               }`}></span>
           </button>
 
-          {/* Overlay — кликабельный фон за меню */}
           {isOpen && (
             <div
               className="fixed inset-0 bg-opacity-40 backdrop-blur-sm z-40 lg:hidden"
@@ -39,7 +38,7 @@ export default function HeaderMenu() {
 
           {/* Меню */}
           <nav
-            onClick={(e) => e.stopPropagation()} // ← блокируем закрытие при клике по самому меню
+            onClick={(e) => e.stopPropagation()}
             className={`fixed top-10 right-0 w-55 h-85 bg-zinc-50 flex justify-center rounded-xl gap-10 text-lg font-sora transition-transform duration-300 
             ${isOpen ? "translate-x-0" : "translate-x-full"} 
             md:fixed md:top-10 md:right-0 md:w-55 md:h-85 md:bg-zinc-50 md:rounded-xl md:transition-transform md:duration-300 

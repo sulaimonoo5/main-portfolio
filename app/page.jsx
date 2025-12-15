@@ -9,14 +9,16 @@ import MySkills from "@/components/mySkills";
 
 export default function Home() {
   return (
-    <main className="font-sora">
+    <>
       <HeaderMenu />
-      <HeroSection />
-      <MySkills />
-      <AboutMe />
-      <MyProjects />
-      <Contact />
-      <Footer />
-    </main>
+      <main className="font-sora">
+        <HeroSection />
+        <MySkills />
+        <AboutMe />
+        <MyProjects />
+        <Contact />
+        <Footer />
+      </main>
+    </>
   );
 }
