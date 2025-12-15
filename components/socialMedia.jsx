@@ -1,29 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
 export default function SocialMedia() {
-  useEffect(() => {
-    gsap.utils.toArray(".media").forEach((el, i) => {
-      gsap.from(el, {
-        x: i % 2 === 0 ? -300 : -300,
-        opacity: 0,
-        duration: 3,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: el,
-          end: "bottom 80%",
-          scrub: true,
-        },
-      });
-    });
-  }, []);
-
   return (
     <>
       <section className="flex items-start max-w-7xl gap-6 media">

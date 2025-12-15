@@ -89,10 +89,10 @@ export default function Contact() {
               required
               className="p-3 border-2 rounded-md h-36 lg:w-102 outline-0 inputs"></textarea>
 
-            <div className="lg:flex lg:gap-6 lg:w-102">
+            <div className="lg:flex lg:gap-6 lg:w-102 inputs">
               <button
                 type="submit"
-                className="inputs bg-black text-white p-3 font-bold rounded-md cursor-pointer">
+                className="bg-black text-white p-3 font-bold rounded-md cursor-pointer">
                 Get in touch
               </button>
               <SocialMedia />
